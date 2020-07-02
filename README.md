@@ -3,10 +3,6 @@ NOTE: The majority of the work for this position will be using JS with ES6 synta
 ## Overview
 Please complete this exercise with node.js and ES6. This exercise is intended to take no longer than 4 hours.  Please limit the detail of your solution with that time in mind.  Please include a README with your submission detailing your solution.
 
-For example,
-```
-Do the endpoints need to be secured?  I assumed not for this exercise but would suggest adding authorization in the future.
-```
 ## Problem
 Lets assume Cascade Fintech has contracted you to build a small **RESTful API** to support their new user tracking software.  
 
