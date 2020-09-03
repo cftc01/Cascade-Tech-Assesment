@@ -1,68 +1,100 @@
 # Technical Assessment
 NOTE: The majority of the work for this position will be using JS with ES6 syntax.
+
 ## Overview
-Please complete this exercise with node.js and ES6. This exercise is intended to take no longer than 4 hours.  Please limit the detail of your solution with that time in mind.  Please include a README with your submission detailing your solution.
+Please complete this exercise with in Vuejs. This exercise is intended to take no longer than 2 hours.  Please limit the detail of your solution with that time in mind.  Please include a README with your submission detailing your solution.
 
 ## Problem
-Lets assume Cascade Fintech has contracted you to build a small **RESTful API** to support their new user tracking software.  
-
-Data does not need to be persisted between server restarts.
+Lets assume Cascade Fintech has contracted you to build a **VueComponent** to support a new transaction feed.  
 
 ## Data definition
 
-### User
-- email
-  - string
-  - This field is required to create a new user
-  - The system must only allow 1 user per unique email address
-- password
-  - string
-  - This field is required to create a new user
-- phone number
-  - number
-  - This field is required to create a new user
-  - When provided, the phone number must follow this pattern ##########
-### Event
-- type
-  - This field is required to create a new event
-  - The value can be any non-empty string
-
-## Data examples
-
-The following input json would create a user
+Assume the following data has been taken from the api and has been converted in VuexStore
 ```json
 {
-  "email": "tester@cascadefintech.com",
-  "password": "VegansRule",
-  "phone": "3332221111"
+	"Statement": {
+		"Transactions": [{
+			"OriginalTraceAuditNo": null,
+			"AccountNumber": "123456789",
+			"TransactionTypeId": "Debit",
+			"TransactionDate": "2020-08-28T03:36:33",
+			"BusinessDate": "2020-08-28T03:36:33",
+			"AvailableBalance": 400.00,
+			"Amount": 12.08,
+			"Description": "Other: POS Transaction",
+			"Billed": false,
+			"MerchantName": "Good Buy",
+			"MerchantId": "GbLV-01"
+		},
+    {
+			"OriginalTraceAuditNo": null,
+			"AccountNumber": "123456789",
+			"TransactionTypeId": "Debit",
+			"TransactionDate": "2020-08-28T03:50:01",
+			"BusinessDate": "2020-08-28T03:50:01",
+			"AvailableBalance": 400.00,
+			"Amount": 129.74,
+			"Description": "Other: POS Transaction",
+			"Billed": false,
+			"MerchantName": "Wally World",
+			"MerchantId": "WWV-000-1220"
+		},
+    {
+			"OriginalTraceAuditNo": null,
+			"AccountNumber": "123456789",
+			"TransactionTypeId": "Debit",
+			"TransactionDate": "2020-08-28T06:43:12",
+			"BusinessDate": "2020-08-28T06:43:12",
+			"AvailableBalance": 400.00,
+			"Amount": 8.08,
+			"Description": "Other: POS Transaction",
+			"Billed": true,
+			"MerchantName": "Quickly Gas Stop",
+			"MerchantId": "QGS-01"
+		}],
+		"NotSettled": [{
+			"OriginalTraceAuditNo": null,
+			"AccountNumber": "123456789",
+			"TransactionTypeId": "Debit",
+			"TransactionDate": "2020-08-28T03:36:33",
+			"BusinessDate": "2020-08-28T03:36:33",
+			"AvailableBalance": 400.00,
+			"Amount": 12.08,
+			"Description": "Other: POS Transaction",
+			"MerchantName": "Good Buy",
+			"MerchantId": "GbLV-01"
+		},
+    {
+			"OriginalTraceAuditNo": null,
+			"AccountNumber": "123456789",
+			"TransactionTypeId": "Debit",
+			"TransactionDate": "2020-08-28T03:50:01",
+			"BusinessDate": "2020-08-28T03:50:01",
+			"AvailableBalance": 400.00,
+			"Amount": 129.74,
+			"Description": "Other: POS Transaction",
+			"MerchantName": "Wally World",
+			"MerchantId": "WWV-000-1220"
+		}]
+	}
 }
 ```
-___
-The following input json would create an event with the type LOGIN
-```json
-{
-  "type": "LOGIN"
-}
-```
-___
 
-The following use cases should be satisfied to get user event data
-- return all failed login events for all users
-- return all login events for a single user
-- return all events for the day before last
-- return all events for the week before not including session timeout
+With the given data write a VueComponent that gets this data from the VuexStore and displays the data in a table. 
 
-The json data returned should at least have the following elements
-```json
-[
-  {
-    "type": "LOGIN",
-    "created: 47239847298347
-  }
-]
-```
-where `created` is the date the event was created.  Choose the format that works best.
+Your table should satisfy the following:
+- Starting balance
+- Ending balance
+- List of Transactions
+- Clearly define transaction information
+
+Hint: Think of yourself as the user, what information do you need to know about the current status of your account.
+
 ___
 
 ## Submission
-- Send an email to hr@cascadefintech.com with a link to your solution on your github account. Do not submit a PR. 
+- Send an email to hr@cascadefintech.com with a link to your solution on your github account. 
+
+Do not submit a PR. 
+Do not ask for external assistance. 
+Do not share solution or assessment with outside sources.
