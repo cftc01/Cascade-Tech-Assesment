@@ -80,9 +80,9 @@ Assume the following data has been taken from the api and has been converted in 
 }
 ```
 
-With the given data write a VueComponent that gets this data from the VuexStore and displays the data in a table. 
+With the given data write a VueComponent that gets this data from the VuexStore and displays the data. 
 
-Your table should satisfy the following:
+Your component should satisfy the following:
 - Starting balance
 - Ending balance
 - List of Transactions
