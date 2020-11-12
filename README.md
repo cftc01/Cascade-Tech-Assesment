@@ -93,7 +93,7 @@ Hint: Think of yourself as the user, what information do you need to know about 
 ___
 
 ## Submission
-- Send an email to hr@cascadefintech.com with a link to your solution on your github account. 
+- Send an email to your Cascade contact with a link to your solution on your github account when completed.
 
 Do not submit a PR. 
 Do not ask for external assistance. 
