@@ -2,7 +2,7 @@
 NOTE: The majority of the work for this position will be using JS with ES6 syntax.
 
 ## Overview
-Please complete this exercise with in Vuejs. This exercise is intended to take no longer than 2 hours.  Please limit the detail of your solution with that time in mind.  Please include a README with your submission detailing your solution.
+Please complete this exercise with Vuejs. This exercise is intended to take no longer than 2 hours.  Please limit the detail of your solution with that time in mind.  Please include a README with your submission detailing your solution.
 
 ## Problem
 Lets assume Cascade Fintech has contracted you to build a **VueComponent** to support a new transaction feed.  
