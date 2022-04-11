@@ -95,6 +95,7 @@ ___
 ## Submission
 - Send an email to your Cascade contact with a link to your solution on your github account when completed.
 
+Do not re-use old code.
 Do not submit a PR. 
 Do not ask for external assistance. 
 Do not share solution or assessment with outside sources.
